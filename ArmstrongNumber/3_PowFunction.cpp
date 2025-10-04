@@ -1,8 +1,8 @@
 /*
-?? Approach: Use standard pow() function
-? Time Complexity: O(d log d) (log d per pow call)
-?? Space Complexity: O(1)
-?? Notes: Uses floating-point arithmetic ? small rounding errors possible.
+💡 Approach: Use standard pow() function
+⏱ Time Complexity: O(d log d) (log d per pow call)
+📦 Space Complexity: O(1)
+⚠️ Notes: Uses floating-point arithmetic → small rounding errors possible.
 For complete problem description, see 1_IntegerPrecompute.cpp or README.md
 */
 
@@ -19,3 +19,4 @@ bool isArmstrong(int num) {
     }
     return res == orig;
 }
+
