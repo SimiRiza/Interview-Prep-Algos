@@ -18,7 +18,7 @@ Implement the function `myPow(x, n)` which calculates **x raised to the power n*
 ## Solutions Overview
 
 ### 1. Iterative Fast Power  
-**File:** [50_Pow_x_n_Iterative.cpp](./50_Pow_x_n_Iterative.cpp)  
+**File:** [50_PowerFunction_Iterative.cpp](./50_PowerFunction_Iterative.cpp)  
 **Description:**  
 Uses exponentiation by squaring iteratively to reduce time complexity. Handles `INT_MIN` by adjusting `n` safely.  
 **Pros:** Easy to debug, no recursion stack usage.  
@@ -32,7 +32,7 @@ Uses exponentiation by squaring iteratively to reduce time complexity. Handles `
 ---
 
 ### 2. Recursive Fast Power  
-**File:** [50_Pow_x_n_Recursive.cpp](./50_Pow_x_n_Recursive.cpp)  
+**File:** [50_PowerFunction_Recursive.c](./50_PowerFunction_Recursive.cpp)  
 **Description:**  
 Recursive implementation of exponentiation by squaring using divide-and-conquer logic.  
 **Pros:** Clean mathematical expression, minimal code.  
