@@ -1,69 +1,62 @@
-50. Pow(x, n)
-📘 Problem Description
+# 0050 Pow(x, n)
 
-Implement the function pow(x, n) that calculates x raised to the power n (x^n).
+This folder contains **two approaches** to solve the LeetCode problem: [Pow(x, n)](https://leetcode.com/problems/powx-n/).
 
-🧩 Approach 1: Iterative (Binary Exponentiation)
-Explanation
+---
 
-This approach uses iterative binary exponentiation to compute power efficiently.
+## Problem Statement
 
-Handles the edge case where n == INT_MIN to prevent overflow.
+Implement the function `myPow(x, n)` which calculates **x raised to the power n** (`xⁿ`).
 
-Converts negative exponents by inverting x and making n positive.
+**Constraints:**  
+- -100.0 < x < 100.0  
+- -2³¹ ≤ n ≤ 2³¹ - 1  
+- n is an integer.
 
-Steps
+---
 
-If n == INT_MIN, increment n and mark the exception.
+## Solutions Overview
 
-If n < 0, invert x (x = 1/x) and make n positive.
+### 1. Iterative Fast Power  
+**File:** [50_Pow_x_n_Iterative.cpp](./50_Pow_x_n_Iterative.cpp)  
+**Description:**  
+Uses exponentiation by squaring iteratively to reduce time complexity. Handles `INT_MIN` by adjusting `n` safely.  
+**Pros:** Easy to debug, no recursion stack usage.  
+**Cons:** Slightly more code than recursive version.  
+**Time Complexity:** O(log n)  
+**Space Complexity:** O(1)  
+**Edge Cases:**  
+- `n < 0`: handled by inverting `x`.  
+- `n == INT_MIN`: adjusted before loop to avoid overflow.
 
-Repeatedly square x and multiply it to res when n is odd.
+---
 
-Adjust result for the exception case.
+### 2. Recursive Fast Power  
+**File:** [50_Pow_x_n_Recursive.cpp](./50_Pow_x_n_Recursive.cpp)  
+**Description:**  
+Recursive implementation of exponentiation by squaring using divide-and-conquer logic.  
+**Pros:** Clean mathematical expression, minimal code.  
+**Cons:** Slight recursion overhead.  
+**Time Complexity:** O(log n)  
+**Space Complexity:** O(log n) (recursion stack)  
+**Edge Cases:**  
+- `n == 0`: returns 1.  
+- `n < 0`: handled by inverting `x` and flipping the sign safely with a `long long` copy.
 
-Complexity
+---
 
-Time Complexity: O(log n)
+## ✅ Summary Comparison
 
-Space Complexity: O(1)
+| Aspect | Iterative | Recursive |
+|--------|------------|------------|
+| **Readability** | Straightforward loop | Cleaner mathematical expression |
+| **Stack Usage** | Constant | Logarithmic |
+| **Implementation** | Easier to debug | More elegant but requires recursion understanding |
+| **Performance** | Slightly better | Slight overhead from recursion |
 
-File
+---
 
-50_Pow_x_n_Iterative.cpp
+## 🎯 Core Idea
 
-🧩 Approach 2: Recursive (Divide and Conquer)
-Explanation
+Both approaches apply **Exponentiation by Squaring**, a technique that reduces power computation from *O(n)* to *O(log n)* by repeatedly squaring the base and halving the exponent.
 
-Uses recursion and the principle:
-x^n = (x^(n/2))^2 if n is even
-x^n = (x^(n/2))^2 * x if n is odd
-
-Safely handles large negative exponents by converting to long long.
-
-Steps
-
-If n < 0, invert x and make n positive.
-
-Recursively compute power for half of n.
-
-Multiply results based on whether n is odd or even.
-
-Complexity
-
-Time Complexity: O(log n)
-
-Space Complexity: O(log n) (due to recursion stack)
-
-File
-
-50_Pow_x_n_Recursive.cpp
-
-✅ Summary Comparison
-
-| Aspect         | Iterative            | Recursive                                         |
-| -------------- | -------------------- | ------------------------------------------------- |
-| Readability    | Straightforward loop | Cleaner mathematical expression                   |
-| Stack Usage    | Constant             | Logarithmic                                       |
-| Implementation | Easier to debug      | More elegant but requires recursion understanding |
-| Performance    | Slightly better      | Slight overhead from recursion                    |
