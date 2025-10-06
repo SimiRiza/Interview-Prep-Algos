@@ -1,7 +1,6 @@
 /*
 File: 001_Fibonacci_Recursive.cpp
 Description: Brute-force recursive approach to compute Fibonacci numbers.
-Author: Your Name
 */
 
 #include <iostream>
@@ -23,3 +22,4 @@ int main() {
     cout << "Fibonacci(" << n << ") = " << sol.fib(n) << endl;
     return 0;
 }
+
