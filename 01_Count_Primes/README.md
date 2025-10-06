@@ -14,9 +14,3 @@ Given an integer `n`, return the count of prime numbers less than `n`.
 ## Edge Cases
 - `n <= 2` → returns 0 (no primes less than 2)
 - Large `n` values handled efficiently by the sieve
-
-## How to Run
-Compile any `.cpp` file and run:
-```bash
-g++ filename.cpp -o output
-./output
