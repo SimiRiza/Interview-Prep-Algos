@@ -1,7 +1,6 @@
 /*
 File: 001_Fibonacci_Iterative.cpp
 Description: Iterative approach to compute Fibonacci numbers (O(n) time, O(1) space).
-Author: Your Name
 */
 
 #include <iostream>
@@ -29,3 +28,4 @@ int main() {
     cout << "Fibonacci(" << n << ") = " << sol.fib(n) << endl;
     return 0;
 }
+
