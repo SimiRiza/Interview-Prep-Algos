@@ -15,3 +15,12 @@ Compute the nth Fibonacci number. The Fibonacci sequence is defined as:
 | [001_Fibonacci_Iterative.cpp](001_Fibonacci_Iterative.cpp) | Iterative approach | O(n) | O(1) | Efficient, handles n ≤ 30 easily, avoids recursion stack overhead. |
 
 ## Example
+Input: n = 10
+Output: 55
+
+
+## Recommendation
+- For learning recursion basics → Recursive version  
+- For efficient computation and coding interviews → Iterative version  
+- Future enhancement → Memoization (DP) for larger n
+
