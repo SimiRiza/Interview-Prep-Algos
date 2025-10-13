@@ -1,4 +1,4 @@
-/*
+/* Author : Simi
  * Problem: Count how many primes are less than a given number n.
  * Approach: Brute Force
  * For each number from 2 to n-1, check if it is prime by testing all divisors.
@@ -9,23 +9,31 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool isPrime(int num) {
-    if (num < 2) return false;
-    for (int i = 2; i * i <= num; i++) {
-        if (num % i == 0) return false;
+bool isPrime(int num)
+{
+    if (num < 2)
+        return false;
+    for (int i = 2; i * i <= num; i++)
+    {
+        if (num % i == 0)
+            return false;
     }
     return true;
 }
 
-int countPrimes(int n) {
+int countPrimes(int n)
+{
     int count = 0;
-    for (int i = 2; i < n; i++) {
-        if (isPrime(i)) count++;
+    for (int i = 2; i < n; i++)
+    {
+        if (isPrime(i))
+            count++;
     }
     return count;
 }
 
-int main() {
+int main()
+{
     int n;
     cin >> n;
     cout << countPrimes(n) << "\n";
