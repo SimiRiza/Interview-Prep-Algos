@@ -1,7 +1,7 @@
 # Example
 
 ## Problem Description
-<!-- Add description -->
+<!-- Add description --> my first code through vs code
 
 ## Solutions
 - Approach 1: solution1.cpp
