@@ -8,8 +8,8 @@ if len(sys.argv) > 1:
 else:
     problem_name = input("Enter problem name: ")
 
-# 2️⃣ Set your repo path here
-repo_path = r"C:\Users\Simi\Desktop\interviewprep.algos"  # Change to your actual repo path
+# 2️⃣ Automatically detect the current folder (no hardcoded user paths)
+repo_path = os.getcwd()  # ✅ Uses the folder where you run the script
 folder_path = os.path.join(repo_path, problem_name)
 
 # 3️⃣ Create folder
@@ -24,6 +24,7 @@ int main() {
     return 0;
 }
 """
+
 for i in range(1, 5):
     file_path = os.path.join(folder_path, f"solution{i}.cpp")
     with open(file_path, "w") as f:
@@ -37,14 +38,15 @@ for i in range(1, 5):
 with open(os.path.join(folder_path, "README.md"), "w") as f:
     f.write(readme_content)
 
-print(f"Folder '{problem_name}' with 4 cpp files and README.md created successfully!")
+print(f"✅ Folder '{problem_name}' with 4 cpp files and README.md created successfully!")
 
 # 6️⃣ Optional Git commands: add, commit, push
 try:
     subprocess.run(["git", "-C", repo_path, "add", "."], check=True)
     subprocess.run(["git", "-C", repo_path, "commit", "-m", f"Add problem: {problem_name}"], check=True)
     subprocess.run(["git", "-C", repo_path, "push"], check=True)
-    print("Changes added, committed, and pushed to GitHub successfully!")
+    print("🚀 Changes added, committed, and pushed to GitHub successfully!")
 except subprocess.CalledProcessError as e:
-    print("Git command failed. Make sure Git is installed and your repo is linked to GitHub.")
+    print("⚠️ Git command failed. Make sure Git is installed and your repo is linked to GitHub.")
     print(e)
+
