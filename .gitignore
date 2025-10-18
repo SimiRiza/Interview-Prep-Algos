@@ -1,0 +1,20 @@
+# Ignore executable files
+*.exe
+
+# Ignore object files
+*.o
+*.obj
+
+# Ignore compiled output
+*.out
+
+# Ignore logs
+*.log
+
+# Ignore VSCode settings folder
+.vscode/
+
+# Ignore temporary files
+*.tmp
+*.bak
+*.swp
