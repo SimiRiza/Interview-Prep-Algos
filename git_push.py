@@ -8,10 +8,10 @@ if len(sys.argv) > 1:
 else:
     commit_message = input("Enter commit message: ")
 
-# 2️⃣ Define your repo path (💡 change this once and forget it)
-repo_path = r"C:\Users\admin\Desktop\New folder\Interview-Prep-Algos"
+# 2️⃣ Automatically use the folder where this script is located
+repo_path = os.path.dirname(os.path.abspath(__file__))
 
-# 3️⃣ Move to repo and run git commands
+# 3️⃣ Run git commands in the repo folder
 try:
     subprocess.run(["git", "-C", repo_path, "add", "."], check=True)
     subprocess.run(["git", "-C", repo_path, "commit", "-m", commit_message], check=True)
